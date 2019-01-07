@@ -106,7 +106,8 @@ $MadelineProto->messages->sendMessage(['peer' => $chatID, 'reply_to_msg_id' => $
 〰〰〰〰〰〰〰〰〰〰
 ⭐️ <code>/answerlist</code>
 • لیست همه جواب سریع ها
-",'parse_mode' => 'html']);
+〰〰〰〰〰〰〰〰〰〰
+@TeleSed",'parse_mode' => 'html']);
 }
  
 }
