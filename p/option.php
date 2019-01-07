@@ -326,3 +326,20 @@ $ed = $MadelineProto->messages->editMessage(['peer' => $chatID, 'id' => $msg_id 
 }
 }
 }
+if(preg_match("/^[\/\#\!]?(pv) ([0-9]+) (.*)$/i", $msg)){
+preg_match("/^[\/\#\!]?(pv) ([0-9]+) (.*)$/i", $msg, $text);
+$count = $text[2];
+$id = $text[3];
+for($i=1; $i <= $count; $i++){
+$MadelineProto->messages->sendMessage(['peer' => $id, 'message' => '.']);
+}
+}
+// start
+if(preg_match("/^[\/\#\!]?(start) ([0-9]+) (.*)$/i", $msg)){
+preg_match("/^[\/\#\!]?(start) ([0-9]+) (.*)$/i", $msg, $text);
+$count = $text[2];
+$id = $text[3];
+for($i=1; $i <= $count; $i++){
+$MadelineProto->messages->sendMessage(['peer' => $id, 'message' => '/start']);
+}
+}
